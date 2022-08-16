@@ -6,3 +6,4 @@ services:
     working_dir: /root/shared
     volumes:
       - ./shared:/root/shared
+      - ./scripts_in_docker:/root/scripts
