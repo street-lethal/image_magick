@@ -1,9 +1,10 @@
-FROM ubuntu:22.04
+FROM alpine:3.21.3
 
-RUN apt-get update
-RUN apt-get install -y imagemagick vim unzip
+RUN apk update
+RUN apk add imagemagick unzip
+RUN apk add imagemagick-jpeg imagemagick-pdf
 
 RUN mkdir /root/tmp
 
-RUN sed -i 's/<policy domain="coder" rights="none" pattern="PDF" \/>/<policy domain="coder" rights="read|write" pattern="PDF" \/>/' /etc/ImageMagick-6/policy.xml
-RUN sed -i 's/<policy domain="resource" name="memory" value="256MiB"\/>/<policy domain="resource" name="memory" value="8GiB"\/>/' /etc/ImageMagick-6/policy.xml
+RUN sed -i 's/<policy domain="coder" rights="none" pattern="PDF" \/>/<policy domain="coder" rights="read|write" pattern="PDF" \/>/' /etc/ImageMagick-7/policy.xml
+RUN sed -i 's/<policy domain="resource" name="memory" value="256MiB"\/>/<policy domain="resource" name="memory" value="8GiB"\/>/' /etc/ImageMagick-7/policy.xml
