@@ -3,6 +3,9 @@ cd ../input
 ls -1 *.jpg | sed -e 's/\.jpg$//' > ../tmp/filename.txt
 while read line
 do
-  magick "$line.jpg" -crop 900x1200+510+0 "../output/$line.jpg"
+  #magick "$line.jpg" -crop 900x1200+510+0 "../output/$line.jpg"
+
+  # novel
+  magick "$line.jpg" -crop 852x1200+534+0 "../output/$line.jpg"
   chown 1000:1000 "../output/$line.jpg"
 done < ../tmp/filename.txt
