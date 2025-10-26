@@ -11,5 +11,4 @@ do
   cd -
   magick ../tmp/brighten_*.jpg "$line.pdf"
   rm ../tmp/*.jpg
-  chown 1000:1000 "$line.pdf"
 done < ../tmp/filename.txt
