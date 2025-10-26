@@ -7,5 +7,4 @@ do
 
   # novel
   magick "$line.jpg" -crop 852x1200+534+0 "../output/$line.jpg"
-  chown 1000:1000 "../output/$line.jpg"
 done < ../tmp/filename.txt
