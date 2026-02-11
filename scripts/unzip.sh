@@ -1,1 +1,2 @@
-docker-compose run --rm share sh -c "../scripts/unzip.sh"
+docker-compose run --rm app sh -c "/app/scripts/unzip.sh"
+docker-compose down

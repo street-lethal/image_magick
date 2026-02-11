@@ -1,1 +1,2 @@
-docker-compose run --rm share sh -c "../scripts/increase_memory.sh;../scripts/unzip.sh"
+docker-compose run --rm app sh -c "/app/scripts/increase_memory.sh;/app/scripts/unzip.sh"
+docker-compose down

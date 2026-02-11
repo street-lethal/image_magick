@@ -1,1 +1,2 @@
-docker-compose run --rm share sh -c "../scripts/to_pdf.sh"
+docker-compose run --rm app sh -c "/app/scripts/to_pdf.sh"
+docker-compose down
